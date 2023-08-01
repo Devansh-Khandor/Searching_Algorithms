@@ -1,0 +1,66 @@
+**********CODE**********
+
+import java.util.*;
+class Linear_Search
+{
+    public static void main()
+    {
+        Scanner ob=new Scanner(System.in);
+        System.out.println("Enter the number of elements.");
+        int n=ob.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("ELEMENT "+(i+1)+": ");
+            arr[i]=ob.nextInt();
+        }
+        System.out.println("ENTER THE ELEMENT TO BE FOUND");
+        int key=ob.nextInt();
+        int result=LinearSearch(arr,key);
+        if(result==-1)
+        {
+            System.out.println("NOT FOUND");
+        }
+        else
+        {
+            System.out.println("FOUND AT: "+result+" INDEX.");
+        }
+    }
+    public static int LinearSearch(int arr[],int key)
+    {
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]==key)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+
+
+
+
+
+
+
+
+
+**********ALGORITHM**********
+
+Linear_Search(a, n, val)  
+Step 1: set pos = -1  
+Step 2: set i = 1  
+Step 3: repeat step 4 while i <= n  
+Step 4: if a[i] == val  
+set pos = i  
+print pos  
+go to step 6  
+[end of if]  
+set ii = i + 1  
+[end of loop]  
+Step 5: if pos = -1  
+print "value is not present in the array "  
+[end of if]  
+Step 6: exit  
